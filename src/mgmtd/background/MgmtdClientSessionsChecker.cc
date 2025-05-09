@@ -1,5 +1,4 @@
 #include "MgmtdClientSessionsChecker.h"
-
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"
 #include "mgmtd/service/MgmtdState.h"

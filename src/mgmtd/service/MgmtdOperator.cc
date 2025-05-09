@@ -1,7 +1,5 @@
 #include "MgmtdOperator.h"
-
 #include <folly/experimental/coro/BlockingWait.h>
-
 #include "core/utils/runOp.h"
 #include "mgmtd/ops/Include.h"
 

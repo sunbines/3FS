@@ -1,5 +1,4 @@
 #include "SetConfigOperation.h"
-
 #include "mgmtd/service/helpers.h"
 
 namespace hf3fs::mgmtd {

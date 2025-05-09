@@ -1,5 +1,4 @@
 #include "ExtendClientSessionOperation.h"
-
 #include "common/utils/StringUtils.h"
 #include "mgmtd/service/helpers.h"
 

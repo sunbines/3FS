@@ -1,5 +1,4 @@
 #include "MgmtdBackgroundRunner.h"
-
 #include "MgmtdChainsUpdater.h"
 #include "MgmtdClientSessionsChecker.h"
 #include "MgmtdHeartbeatChecker.h"

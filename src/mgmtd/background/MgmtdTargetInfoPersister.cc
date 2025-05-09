@@ -1,5 +1,4 @@
 #include "MgmtdTargetInfoPersister.h"
-
 #include "common/utils/OptionalUtils.h"
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"

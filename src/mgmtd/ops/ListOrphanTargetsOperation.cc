@@ -1,5 +1,4 @@
 #include "ListOrphanTargetsOperation.h"
-
 #include "common/utils/StringUtils.h"
 #include "mgmtd/service/helpers.h"
 #include "mgmtd/service/updateChain.h"

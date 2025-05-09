@@ -1,5 +1,4 @@
 #include "MgmtdState.h"
-
 #include "MgmtdConfig.h"
 #include "core/user/UserToken.h"
 #include "fbs/mgmtd/NodeConversion.h"

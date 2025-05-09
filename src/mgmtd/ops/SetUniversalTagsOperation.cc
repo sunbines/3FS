@@ -1,5 +1,4 @@
 #include "SetUniversalTagsOperation.h"
-
 #include "fbs/mgmtd/NodeConversion.h"
 #include "mgmtd/service/helpers.h"
 

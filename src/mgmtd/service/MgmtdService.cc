@@ -1,5 +1,4 @@
 #include "MgmtdService.h"
-
 #include "MgmtdOperator.h"
 
 #define DEFINE_SERDE_SERVICE_METHOD_FULL(svc, name, Name, id, reqtype, rsptype)        \
