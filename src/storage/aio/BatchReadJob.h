@@ -2,7 +2,6 @@
 
 #include <folly/experimental/coro/Baton.h>
 #include <utility>
-
 #include "chunk_engine/src/cxx.rs.h"
 #include "common/net/ib/IBSocket.h"
 #include "common/serde/CallContext.h"

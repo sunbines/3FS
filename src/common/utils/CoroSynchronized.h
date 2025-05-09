@@ -36,8 +36,7 @@ class CoroSynchronized {
   using LockPtr = detail::CoExclusiveLockGuard<T>;
 
   template <typename... Args>
-  explicit CoroSynchronized(Args &&...args)
-      : obj_(std::forward<Args>(args)...) {}
+  explicit CoroSynchronized(Args &&...args): obj_(std::forward<Args>(args)...) {}
 
   CoTask<SharedLockPtr> coSharedLock() {
     auto lock = co_await sharedMu_.co_scoped_lock_shared();

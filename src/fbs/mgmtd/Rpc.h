@@ -21,6 +21,7 @@ DEFINE_SERDE_HELPER_STRUCT(GetPrimaryMgmtdRsp) {
   SERDE_STRUCT_FIELD(primary, std::optional<flat::PersistentNodeInfo>{});
 };
 
+// struct HeartbeatReq : public ::hf3fs::serde::SerdeHelper<HeartbeatReq> {
 DEFINE_SERDE_HELPER_STRUCT(HeartbeatReq) {
   SERDE_STRUCT_FIELD(clusterId, String{});
   SERDE_STRUCT_FIELD(info, flat::HeartbeatInfo{});
@@ -28,7 +29,10 @@ DEFINE_SERDE_HELPER_STRUCT(HeartbeatReq) {
   SERDE_STRUCT_FIELD(user, flat::UserInfo{});
 };
 
-DEFINE_SERDE_HELPER_STRUCT(HeartbeatRsp) { SERDE_STRUCT_FIELD(config, std::optional<flat::ConfigInfo>{}); };
+// struct HeartbeatRsp : public ::hf3fs::serde::SerdeHelper<HeartbeatRsp> {
+DEFINE_SERDE_HELPER_STRUCT(HeartbeatRsp) { 
+  SERDE_STRUCT_FIELD(config, std::optional<flat::ConfigInfo>{}); 
+};
 
 DEFINE_SERDE_HELPER_STRUCT(RegisterNodeReq) {
   SERDE_STRUCT_FIELD(clusterId, String{});
@@ -139,6 +143,7 @@ DEFINE_SERDE_HELPER_STRUCT(UnregisterNodeReq) {
 
 DEFINE_SERDE_HELPER_STRUCT(UnregisterNodeRsp) { SERDE_STRUCT_FIELD(dummy, Void{}); };
 
+// struct SetChainsReq : public ::hf3fs::serde::SerdeHelper<SetChainsReq> {
 DEFINE_SERDE_HELPER_STRUCT(SetChainsReq) {
   SERDE_STRUCT_FIELD(clusterId, String{});
   SERDE_STRUCT_FIELD(chains, std::vector<flat::ChainSetting>{});
@@ -218,6 +223,7 @@ DEFINE_SERDE_HELPER_STRUCT(RotateAsPreferredOrderReq) {
 
 DEFINE_SERDE_HELPER_STRUCT(RotateAsPreferredOrderRsp) { SERDE_STRUCT_FIELD(chain, flat::ChainInfo{}); };
 
+// struct UpdateChainReq : public ::hf3fs::serde::SerdeHelper<UpdateChainReq> {
 DEFINE_SERDE_HELPER_STRUCT(UpdateChainReq) {
   enum class Mode : uint8_t {
     ADD = 0,
@@ -230,6 +236,8 @@ DEFINE_SERDE_HELPER_STRUCT(UpdateChainReq) {
   SERDE_STRUCT_FIELD(mode, Mode::ADD);
 };
 
-DEFINE_SERDE_HELPER_STRUCT(UpdateChainRsp) { SERDE_STRUCT_FIELD(chain, flat::ChainInfo{}); };
-
+// struct UpdateChainRsp : public ::hf3fs::serde::SerdeHelper<UpdateChainRsp> {
+DEFINE_SERDE_HELPER_STRUCT(UpdateChainRsp) { 
+  SERDE_STRUCT_FIELD(chain, flat::ChainInfo{}); 
+};
 }  // namespace hf3fs::mgmtd

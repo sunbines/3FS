@@ -6,7 +6,6 @@
 #include <optional>
 #include <utility>
 #include <variant>
-
 #include "common/kv/ITransaction.h"
 #include "common/utils/Coroutine.h"
 #include "common/utils/Duration.h"

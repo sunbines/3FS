@@ -1,7 +1,6 @@
 #pragma once
 
 #include <limits>
-
 #include "chunk_engine/src/cxx.rs.h"
 #include "common/utils/UtcTime.h"
 #include "fbs/storage/Common.h"

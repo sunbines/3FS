@@ -1,5 +1,4 @@
 #include "MgmtdTargetInfoLoader.h"
-
 #include "common/utils/OptionalUtils.h"
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"
@@ -12,9 +11,7 @@ namespace {
 #define OP_NAME "LoadTargetInfo"
 
 struct Op : core::ServiceOperationWithMetric<"MgmtdService", OP_NAME, "bg"> {
-  Op(SteadyTime &loadedLeaseStart)
-      : loadedLeaseStart_(loadedLeaseStart) {}
-
+  Op(SteadyTime &loadedLeaseStart): loadedLeaseStart_(loadedLeaseStart) {}
   String toStringImpl() const final { return OP_NAME; }
 
   auto handle(MgmtdState &state) -> CoTryTask<void> {
@@ -102,8 +99,8 @@ struct Op : core::ServiceOperationWithMetric<"MgmtdService", OP_NAME, "bg"> {
   SteadyTime &loadedLeaseStart_;
 };
 }  // namespace
-MgmtdTargetInfoLoader::MgmtdTargetInfoLoader(MgmtdState &state)
-    : state_(state) {}
+
+MgmtdTargetInfoLoader::MgmtdTargetInfoLoader(MgmtdState &state): state_(state) {}
 
 CoTask<void> MgmtdTargetInfoLoader::run() {
   Op op(loadedLeaseStart);

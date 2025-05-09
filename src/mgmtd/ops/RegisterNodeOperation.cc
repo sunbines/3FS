@@ -1,5 +1,4 @@
 #include "RegisterNodeOperation.h"
-
 #include "fbs/mgmtd/NodeConversion.h"
 #include "mgmtd/service/helpers.h"
 

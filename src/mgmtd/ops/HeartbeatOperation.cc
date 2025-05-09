@@ -1,5 +1,4 @@
 #include "HeartbeatOperation.h"
-
 #include "common/utils/StringUtils.h"
 #include "fbs/mgmtd/NodeConversion.h"
 #include "mgmtd/service/helpers.h"

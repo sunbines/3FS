@@ -4,7 +4,6 @@
 #include <folly/executors/CPUThreadPoolExecutor.h>
 #include <folly/fibers/Semaphore.h>
 #include <limits>
-
 #include "common/net/ib/RDMABuf.h"
 #include "common/utils/CPUExecutorGroup.h"
 #include "common/utils/ConfigBase.h"

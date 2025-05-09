@@ -1,5 +1,4 @@
 #include "MgmtdClientSessionsChecker.h"
-
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"
 #include "mgmtd/service/MgmtdState.h"
@@ -10,6 +9,7 @@ namespace {
 struct Op : core::ServiceOperationWithMetric<"MgmtdService", "CheckClientSessions", "bg"> {
   String toStringImpl() const final { return "CheckClientSessions"; }
   auto handle(MgmtdState &state) -> CoTryTask<void> {
+    //session过期时间为20分钟
     auto timeout = state.config_.client_session_timeout().asUs();
     auto now = SteadyClock::now();
 
@@ -36,8 +36,7 @@ struct Op : core::ServiceOperationWithMetric<"MgmtdService", "CheckClientSession
 };
 }  // namespace
 
-MgmtdClientSessionsChecker::MgmtdClientSessionsChecker(MgmtdState &state)
-    : state_(state) {}
+MgmtdClientSessionsChecker::MgmtdClientSessionsChecker(MgmtdState &state): state_(state) {}
 
 CoTask<void> MgmtdClientSessionsChecker::check() {
   Op op;

@@ -1,7 +1,5 @@
 #include "MgmtdOperator.h"
-
 #include <folly/experimental/coro/BlockingWait.h>
-
 #include "core/utils/runOp.h"
 #include "mgmtd/ops/Include.h"
 
@@ -14,8 +12,7 @@
 namespace hf3fs::mgmtd {
 
 MgmtdOperator::MgmtdOperator(std::shared_ptr<core::ServerEnv> env, const MgmtdConfig &config)
-    : state_(env, config),
-      backgroundRunner_(state_) {}
+    : state_(env, config), backgroundRunner_(state_) {}
 
 void MgmtdOperator::start() { backgroundRunner_.start(); }
 

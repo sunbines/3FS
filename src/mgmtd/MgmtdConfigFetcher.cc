@@ -1,7 +1,5 @@
 #include "MgmtdConfigFetcher.h"
-
 #include <folly/experimental/coro/BlockingWait.h>
-
 #include "MgmtdServer.h"
 #include "common/app/ApplicationBase.h"
 #include "common/kv/WithTransaction.h"

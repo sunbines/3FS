@@ -4,7 +4,6 @@
 #include <memory>
 #include <optional>
 #include <sys/stat.h>
-
 #include "common/utils/FaultInjection.h"
 #include "common/utils/Result.h"
 #include "common/utils/Uuid.h"

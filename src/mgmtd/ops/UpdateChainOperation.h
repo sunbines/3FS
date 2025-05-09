@@ -8,8 +8,7 @@ namespace hf3fs::mgmtd {
 struct UpdateChainOperation : core::ServiceOperationWithMetric<"MgmtdService", "UpdateChain", "op"> {
   UpdateChainReq req;
 
-  explicit UpdateChainOperation(UpdateChainReq r)
-      : req(std::move(r)) {}
+  explicit UpdateChainOperation(UpdateChainReq r): req(std::move(r)) {}
 
   String toStringImpl() const final { return fmt::format("UpdateChain {}", req.chainId); }
 

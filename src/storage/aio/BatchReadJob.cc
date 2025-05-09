@@ -1,5 +1,4 @@
 #include "storage/aio/BatchReadJob.h"
-
 #include "common/monitor/Recorder.h"
 #include "common/utils/Duration.h"
 #include "storage/store/StorageTarget.h"

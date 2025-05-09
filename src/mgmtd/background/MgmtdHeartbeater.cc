@@ -1,5 +1,4 @@
 #include "MgmtdHeartbeater.h"
-
 #include "common/app/ApplicationBase.h"
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"

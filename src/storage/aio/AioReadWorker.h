@@ -5,7 +5,6 @@
 #include <folly/executors/CPUThreadPoolExecutor.h>
 #include <memory>
 #include <vector>
-
 #include "common/utils/BoundedQueue.h"
 #include "common/utils/ConfigBase.h"
 #include "common/utils/Result.h"

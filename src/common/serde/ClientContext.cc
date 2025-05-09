@@ -1,5 +1,4 @@
 #include "common/serde/ClientContext.h"
-
 #include "common/net/RequestOptions.h"
 
 namespace hf3fs::serde {
@@ -50,8 +49,7 @@ const folly::atomic_shared_ptr<const net::CoreRequestOptions> kDefaultOptions{
 }  // namespace
 
 ClientContext::ClientContext(const net::TransportPtr &tr)
-    : connectionSource_(tr.get()),
-      options_(kDefaultOptions) {}
+    : connectionSource_(tr.get()), options_(kDefaultOptions) {}
 
 void ClientContext::reportMetrics(const monitor::TagSet &tags,
                                   Timestamp *ts,

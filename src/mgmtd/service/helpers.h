@@ -1,6 +1,5 @@
 #include <atomic>
 #include <folly/experimental/coro/Sleep.h>
-
 #include "MgmtdConfig.h"
 #include "MgmtdOperator.h"
 #include "MgmtdState.h"

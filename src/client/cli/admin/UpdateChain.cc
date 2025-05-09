@@ -1,8 +1,6 @@
 #include "UpdateChain.h"
-
 #include <boost/algorithm/string.hpp>
 #include <scn/scn.h>
-
 #include "AdminEnv.h"
 #include "Utils.h"
 #include "client/cli/common/Dispatcher.h"

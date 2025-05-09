@@ -1,5 +1,4 @@
 #include "ChunkEngine.h"
-
 #include "chunk_engine/src/cxx.rs.h"
 #include "fbs/storage/Common.h"
 #include "storage/update/UpdateJob.h"

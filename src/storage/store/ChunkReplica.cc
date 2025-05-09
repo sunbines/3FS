@@ -1,8 +1,6 @@
 #include "storage/store/ChunkReplica.h"
-
 #include <folly/Random.h>
 #include <folly/logging/xlog.h>
-
 #include "common/monitor/Recorder.h"
 #include "common/utils/Duration.h"
 #include "common/utils/FileUtils.h"

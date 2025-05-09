@@ -1,5 +1,4 @@
 #include "MgmtdHeartbeatChecker.h"
-
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"
 #include "mgmtd/service/MgmtdState.h"
@@ -17,6 +16,7 @@ struct Op : core::ServiceOperationWithMetric<"MgmtdService", "CheckHeartbeat", "
   String toStringImpl() const final { return "CheckHeartbeat"; }
 
   auto handle(MgmtdState &state) -> CoTryTask<void> {
+    //心跳时间为60秒
     auto heartbeatFailInterval = state.config_.heartbeat_fail_interval().asUs();
     auto start = state.utcNow();
 

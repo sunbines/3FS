@@ -1,8 +1,6 @@
 #include "storage/sync/ResyncWorker.h"
-
 #include <folly/ScopeGuard.h>
 #include <folly/experimental/coro/Collect.h>
-
 #include "common/monitor/Recorder.h"
 #include "common/utils/Duration.h"
 #include "common/utils/Result.h"

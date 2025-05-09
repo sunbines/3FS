@@ -4,7 +4,6 @@
 #include <tuple>
 #include <type_traits>
 #include <utility>
-
 #include "common/utils/TypeTraits.h"
 
 namespace hf3fs::refl {

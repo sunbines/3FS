@@ -1,8 +1,6 @@
 #include "MgmtdServer.h"
-
 #include <folly/experimental/coro/BlockingWait.h>
 #include <folly/logging/xlog.h>
-
 #include "common/app/ApplicationBase.h"
 #include "core/app/ServerEnv.h"
 #include "core/service/CoreService.h"
@@ -13,9 +11,7 @@
 
 namespace hf3fs::mgmtd {
 
-MgmtdServer::MgmtdServer(const Config &config)
-    : net::Server(config.base()),
-      config_(config) {}
+MgmtdServer::MgmtdServer(const Config &config): net::Server(config.base()), config_(config) {}
 
 MgmtdServer::~MgmtdServer() {}
 

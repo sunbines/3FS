@@ -1,7 +1,6 @@
 #pragma once
 
 #include <folly/experimental/coro/Baton.h>
-
 #include "chunk_engine/src/cxx.rs.h"
 #include "fbs/storage/Common.h"
 #include "storage/store/ChunkMetadata.h"

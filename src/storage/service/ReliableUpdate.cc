@@ -1,5 +1,4 @@
 #include "storage/service/ReliableUpdate.h"
-
 #include "common/monitor/Recorder.h"
 #include "common/utils/Duration.h"
 #include "storage/service/Components.h"

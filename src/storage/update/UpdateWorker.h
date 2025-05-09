@@ -1,7 +1,6 @@
 #pragma once
 
 #include <folly/executors/CPUThreadPoolExecutor.h>
-
 #include "common/utils/BoundedQueue.h"
 #include "storage/store/StorageTargets.h"
 #include "storage/update/UpdateJob.h"

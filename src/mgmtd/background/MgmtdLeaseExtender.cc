@@ -1,7 +1,5 @@
 #include "MgmtdLeaseExtender.h"
-
 #include <folly/experimental/coro/Collect.h>
-
 #include "common/utils/StringUtils.h"
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"
@@ -258,8 +256,7 @@ struct Op : core::ServiceOperationWithMetric<"MgmtdService", "ExtendLease", "bg"
   }
 };
 }  // namespace
-MgmtdLeaseExtender::MgmtdLeaseExtender(MgmtdState &state)
-    : state_(state) {}
+MgmtdLeaseExtender::MgmtdLeaseExtender(MgmtdState &state): state_(state) {}
 
 CoTask<void> MgmtdLeaseExtender::extend() {
   Op op;

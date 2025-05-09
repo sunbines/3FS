@@ -1,5 +1,4 @@
 #include "MgmtdNewBornChainsChecker.h"
-
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"
 #include "mgmtd/service/MgmtdState.h"
@@ -11,6 +10,7 @@ struct Op : core::ServiceOperationWithMetric<"MgmtdService", "CheckNewBornChains
   String toStringImpl() const final { return "CheckNewBornChains"; }
 
   auto handle(MgmtdState &state) -> CoTryTask<void> {
+    // 时间大约为120秒的时间
     auto bootstrapInterval = state.config_.new_chain_bootstrap_interval().asUs();
 
     SteadyTime leaseStartTs;
@@ -52,8 +52,7 @@ struct Op : core::ServiceOperationWithMetric<"MgmtdService", "CheckNewBornChains
 };
 }  // namespace
 
-MgmtdNewBornChainsChecker::MgmtdNewBornChainsChecker(MgmtdState &state)
-    : state_(state) {}
+MgmtdNewBornChainsChecker::MgmtdNewBornChainsChecker(MgmtdState &state): state_(state) {}
 
 CoTask<void> MgmtdNewBornChainsChecker::check() {
   Op op;

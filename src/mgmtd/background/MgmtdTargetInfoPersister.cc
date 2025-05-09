@@ -1,5 +1,4 @@
 #include "MgmtdTargetInfoPersister.h"
-
 #include "common/utils/OptionalUtils.h"
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"
@@ -64,8 +63,7 @@ struct Op : core::ServiceOperationWithMetric<"MgmtdService", OP_NAME, "bg"> {
   }
 };
 }  // namespace
-MgmtdTargetInfoPersister::MgmtdTargetInfoPersister(MgmtdState &state)
-    : state_(state) {}
+MgmtdTargetInfoPersister::MgmtdTargetInfoPersister(MgmtdState &state): state_(state) {}
 
 CoTask<void> MgmtdTargetInfoPersister::run() {
   Op op;

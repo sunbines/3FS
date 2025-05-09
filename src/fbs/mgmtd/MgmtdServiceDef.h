@@ -1,5 +1,6 @@
 #include "fbs/macros/SerdeDef.h"
 
+//DEFINE_SERDE_SERVICE_METHOD_FULL(Mgmtd, getPrimaryMgmtd, GetPrimaryMgmtd, 1, GetPrimaryMgmtdReq, GetPrimaryMgmtdRsp)
 DEFINE_SERDE_SERVICE_METHOD(Mgmtd, getPrimaryMgmtd, GetPrimaryMgmtd, 1)
 // 2 is deprecated
 DEFINE_SERDE_SERVICE_METHOD(Mgmtd, heartbeat, Heartbeat, 3)

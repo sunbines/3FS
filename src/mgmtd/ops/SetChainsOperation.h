@@ -8,8 +8,7 @@ namespace hf3fs::mgmtd {
 struct SetChainsOperation : core::ServiceOperationWithMetric<"MgmtdService", "SetChains", "op"> {
   SetChainsReq req;
 
-  explicit SetChainsOperation(SetChainsReq r)
-      : req(std::move(r)) {}
+  explicit SetChainsOperation(SetChainsReq r): req(std::move(r)) {}
 
   String toStringImpl() const final { return "SetChains"; }
 

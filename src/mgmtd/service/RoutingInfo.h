@@ -24,6 +24,7 @@ using ChainTableVersionMap = std::map<flat::ChainTableVersion, flat::ChainTable>
 using ChainTableMap = robin_hood::unordered_map<flat::ChainTableId, ChainTableVersionMap>;
 using ChainMap = robin_hood::unordered_map<flat::ChainId, flat::ChainInfo>;
 using TargetMap = robin_hood::unordered_map<flat::TargetId, TargetInfo>;
+//value: 该ChainID诞生的时间
 using NewBornChains = robin_hood::unordered_map<flat::ChainId, SteadyTime>;
 using OrphanTargetsByTargetId = robin_hood::unordered_map<flat::TargetId, flat::TargetInfo>;
 using OrphanTargetsByNodeId = robin_hood::unordered_map<flat::NodeId, robin_hood::unordered_set<flat::TargetId>>;

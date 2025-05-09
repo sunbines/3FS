@@ -1,7 +1,6 @@
 #pragma once
 
 #include <folly/Range.h>
-
 #include "common/utils/Result.h"
 #include "storage/aio/BatchReadJob.h"
 #include "storage/store/ChunkMetadata.h"

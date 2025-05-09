@@ -1,5 +1,4 @@
 #include "MgmtdChainsUpdater.h"
-
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"
 #include "mgmtd/service/MgmtdState.h"
@@ -56,8 +55,7 @@ struct Op : core::ServiceOperationWithMetric<"MgmtdService", "UpdateChains", "bg
 };
 }  // namespace
 
-MgmtdChainsUpdater::MgmtdChainsUpdater(MgmtdState &state)
-    : state_(state) {}
+MgmtdChainsUpdater::MgmtdChainsUpdater(MgmtdState &state): state_(state) {}
 
 CoTask<void> MgmtdChainsUpdater::update(SteadyTime &lastUpdateTs) {
   Op op;

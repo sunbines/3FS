@@ -4,6 +4,8 @@
 
 namespace hf3fs::mgmtd {
 struct MgmtdState;
+
+//周期执行，每个10秒执行一次
 class MgmtdNewBornChainsChecker {
  public:
   explicit MgmtdNewBornChainsChecker(MgmtdState &state);

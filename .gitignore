@@ -15,3 +15,6 @@ compile_commands.json
 *~
 __pycache__
 /target
+GPATH
+GRTAGS
+GTAGS

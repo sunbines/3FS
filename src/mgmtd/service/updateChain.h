@@ -8,8 +8,7 @@ namespace hf3fs::mgmtd {
 struct ChainTargetInfoEx : public flat::ChainTargetInfo {
   ChainTargetInfoEx() = default;
   ChainTargetInfoEx(const flat::ChainTargetInfo &cti, flat::LocalTargetState ls)
-      : flat::ChainTargetInfo(cti),
-        localState(ls) {}
+      : flat::ChainTargetInfo(cti), localState(ls) {}
   explicit ChainTargetInfoEx(const flat::TargetInfo &ti) {
     targetId = ti.targetId;
     publicState = ti.publicState;

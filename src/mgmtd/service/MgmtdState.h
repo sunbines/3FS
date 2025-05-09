@@ -40,8 +40,7 @@ struct MgmtdState {
   class WriterMutexGuard {
    public:
     WriterMutexGuard(std::unique_lock<folly::coro::Mutex> mu, std::string_view m)
-        : mu_(std::move(mu)),
-          method_(m) {}
+        : mu_(std::move(mu)), method_(m) {}
     WriterMutexGuard(WriterMutexGuard &&other) = default;
     ~WriterMutexGuard();
 

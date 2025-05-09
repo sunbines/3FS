@@ -1,10 +1,8 @@
 #include "storage/store/StorageTarget.h"
-
 #include <boost/filesystem/operations.hpp>
 #include <folly/experimental/symbolizer/Symbolizer.h>
 #include <fstream>
 #include <sys/stat.h>
-
 #include "common/monitor/Recorder.h"
 #include "common/serde/Serde.h"
 #include "common/utils/MagicEnum.hpp"

@@ -1,5 +1,4 @@
 #include "meta/store/PathResolve.h"
-
 #include <cstddef>
 #include <fcntl.h>
 #include <folly/Overload.h>
@@ -11,7 +10,6 @@
 #include <map>
 #include <numeric>
 #include <variant>
-
 #include "common/monitor/Recorder.h"
 #include "common/utils/Coroutine.h"
 #include "common/utils/Duration.h"

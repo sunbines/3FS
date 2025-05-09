@@ -1,5 +1,4 @@
 #include "updateChain.h"
-
 #include "common/utils/OptionalUtils.h"
 
 namespace hf3fs::mgmtd {

@@ -8,8 +8,7 @@ namespace hf3fs::mgmtd {
 struct ExtendClientSessionOperation : core::ServiceOperationWithMetric<"MgmtdService", "ExtendClientSession", "op"> {
   ExtendClientSessionReq req;
 
-  explicit ExtendClientSessionOperation(ExtendClientSessionReq r)
-      : req(std::move(r)) {}
+  explicit ExtendClientSessionOperation(ExtendClientSessionReq r): req(std::move(r)) {}
 
   String toStringImpl() const final {
     return fmt::format("ExtendClientSession {}@{}", req.clientId, req.data.universalId);

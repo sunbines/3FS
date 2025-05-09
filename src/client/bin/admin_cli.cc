@@ -4,7 +4,6 @@
 #include <folly/init/Init.h>
 #include <folly/logging/xlog.h>
 #include <iostream>
-
 #include "client/cli/admin/AdminEnv.h"
 #include "client/cli/admin/registerAdminCommands.h"
 #include "client/cli/common/Utils.h"

@@ -1,5 +1,4 @@
 #include "MgmtdLauncherConfig.h"
-
 #include "common/app/ApplicationBase.h"
 #include "common/app/Utils.h"
 

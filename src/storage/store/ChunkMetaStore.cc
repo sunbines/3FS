@@ -1,9 +1,7 @@
 #include "storage/store/ChunkMetaStore.h"
-
 #include <folly/ScopeGuard.h>
 #include <folly/logging/xlog.h>
 #include <limits>
-
 #include "common/monitor/Recorder.h"
 #include "common/serde/BigEndian.h"
 #include "common/serde/Serde.h"

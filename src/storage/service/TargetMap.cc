@@ -1,7 +1,5 @@
 #include "storage/service/TargetMap.h"
-
 #include <algorithm>
-
 #include "common/monitor/Recorder.h"
 #include "common/utils/RobinHood.h"
 #include "fbs/mgmtd/MgmtdTypes.h"

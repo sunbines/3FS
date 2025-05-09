@@ -1,8 +1,6 @@
 #include "storage/store/GlobalFileStore.h"
-
 #include <fcntl.h>
 #include <folly/logging/xlog.h>
-
 #include "common/utils/Duration.h"
 #include "common/utils/Size.h"
 

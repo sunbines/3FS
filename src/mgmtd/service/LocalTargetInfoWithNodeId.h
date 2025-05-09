@@ -10,12 +10,8 @@ struct LocalTargetInfoWithNodeId {
 
   LocalTargetInfoWithNodeId() = default;
   LocalTargetInfoWithNodeId(flat::NodeId nodeId, flat::LocalTargetInfo info)
-      : targetId(info.targetId),
-        nodeId(nodeId),
-        localState(info.localState) {}
+      : targetId(info.targetId), nodeId(nodeId), localState(info.localState) {}
   LocalTargetInfoWithNodeId(flat::TargetId i, flat::NodeId ni, flat::LocalTargetState state)
-      : targetId(i),
-        nodeId(ni),
-        localState(state) {}
+      : targetId(i), nodeId(ni), localState(state) {}
 };
 }  // namespace hf3fs::mgmtd

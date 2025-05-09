@@ -2,7 +2,6 @@
 
 #include <folly/ThreadLocal.h>
 #include <mutex>
-
 #include "common/utils/ConfigBase.h"
 #include "common/utils/FdWrapper.h"
 #include "common/utils/Path.h"

@@ -1,8 +1,6 @@
 #include "storage/service/StorageOperator.h"
-
 #include <boost/range/adaptor/reversed.hpp>
 #include <fmt/format.h>
-
 #include "common/monitor/Recorder.h"
 #include "common/net/RDMAControl.h"
 #include "common/net/RequestOptions.h"

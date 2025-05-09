@@ -1,5 +1,4 @@
 #include "MgmtdMetricsUpdater.h"
-
 #include "common/utils/StringUtils.h"
 #include "core/utils/ServiceOperation.h"
 #include "core/utils/runOp.h"

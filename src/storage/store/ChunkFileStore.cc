@@ -1,9 +1,7 @@
 #include "storage/store/ChunkFileStore.h"
-
 #include <fcntl.h>
 #include <folly/logging/xlog.h>
 #include <limits>
-
 #include "common/monitor/Recorder.h"
 #include "common/utils/Result.h"
 #include "storage/store/ChunkMetadata.h"
