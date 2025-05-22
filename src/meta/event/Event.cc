@@ -1,11 +1,9 @@
 #include "meta/event/Event.h"
-
 #include <cassert>
 #include <folly/json.h>
 #include <folly/logging/Logger.h>
 #include <folly/logging/LoggerDB.h>
 #include <folly/logging/xlog.h>
-
 #include "common/utils/MagicEnum.hpp"
 #include "common/utils/Result.h"
 

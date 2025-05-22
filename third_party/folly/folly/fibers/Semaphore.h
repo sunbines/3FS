@@ -33,8 +33,7 @@ namespace fibers {
  */
 class Semaphore {
  public:
-  explicit Semaphore(size_t tokenCount)
-      : capacity_(tokenCount), tokens_(int64_t(capacity_)) {}
+  explicit Semaphore(size_t tokenCount): capacity_(tokenCount), tokens_(int64_t(capacity_)) {}
 
   Semaphore(const Semaphore&) = delete;
   Semaphore(Semaphore&&) = delete;

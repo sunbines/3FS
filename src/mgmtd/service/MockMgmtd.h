@@ -7,7 +7,6 @@
 #include <memory>
 #include <optional>
 #include <unistd.h>
-
 #include "common/utils/ConfigBase.h"
 #include "common/utils/Coroutine.h"
 #include "common/utils/Result.h"

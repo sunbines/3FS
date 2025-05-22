@@ -3,7 +3,6 @@
 #include <folly/logging/xlog.h>
 #include <memory>
 #include <optional>
-
 #include "common/kv/ITransaction.h"
 #include "common/utils/Result.h"
 #include "fbs/meta/Common.h"

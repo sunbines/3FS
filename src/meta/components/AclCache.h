@@ -5,7 +5,6 @@
 #include <folly/Synchronized.h>
 #include <folly/container/EvictingCacheMap.h>
 #include <optional>
-
 #include "common/monitor/Recorder.h"
 #include "common/utils/Duration.h"
 #include "common/utils/UtcTime.h"

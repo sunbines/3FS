@@ -1,5 +1,4 @@
 #include "meta/components/SessionManager.h"
-
 #include <cassert>
 #include <cstdint>
 #include <fmt/format.h>
@@ -12,7 +11,6 @@
 #include <string_view>
 #include <utility>
 #include <vector>
-
 #include "common/app/ApplicationBase.h"
 #include "common/app/NodeId.h"
 #include "common/kv/ITransaction.h"

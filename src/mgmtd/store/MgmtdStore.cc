@@ -1,8 +1,6 @@
 #include "MgmtdStore.h"
-
 #include <folly/experimental/coro/Collect.h>
 #include <folly/lang/Bits.h>
-
 #include "common/kv/KeyPrefix.h"
 #include "common/utils/MagicEnum.hpp"
 #include "common/utils/SerDeser.h"

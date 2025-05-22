@@ -1,11 +1,9 @@
 #include "SetAttr.h"
-
 #include <fcntl.h>
 #include <folly/ScopeGuard.h>
 #include <folly/logging/xlog.h>
 #include <optional>
 #include <sys/stat.h>
-
 #include "common/kv/ITransaction.h"
 #include "common/utils/Coroutine.h"
 #include "common/utils/Result.h"
@@ -23,8 +21,7 @@ namespace hf3fs::meta::server {
 class SetAttrOp : public Operation<SetAttrRsp> {
  public:
   SetAttrOp(MetaStore &meta, const SetAttrReq &req_)
-      : Operation<SetAttrRsp>(meta),
-        req_(req_) {}
+      : Operation<SetAttrRsp>(meta), req_(req_) {}
 
   OPERATION_TAGS(req_);
 

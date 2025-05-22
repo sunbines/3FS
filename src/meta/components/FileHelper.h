@@ -10,7 +10,6 @@
 #include <memory>
 #include <optional>
 #include <utility>
-
 #include "client/mgmtd/ICommonMgmtdClient.h"
 #include "client/storage/StorageClient.h"
 #include "common/utils/BackgroundRunner.h"

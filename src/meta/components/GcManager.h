@@ -17,7 +17,6 @@
 #include <utility>
 #include <variant>
 #include <vector>
-
 #include "client/mgmtd/ICommonMgmtdClient.h"
 #include "client/mgmtd/MgmtdClient.h"
 #include "client/storage/StorageClient.h"

@@ -12,7 +12,6 @@
 #include <sys/stat.h>
 #include <utility>
 #include <vector>
-
 #include "common/kv/ITransaction.h"
 #include "common/utils/Coroutine.h"
 #include "common/utils/FaultInjection.h"

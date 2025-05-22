@@ -2,7 +2,6 @@
 #include <memory>
 #include <stack>
 #include <vector>
-
 #include "common/kv/ITransaction.h"
 #include "common/utils/Coroutine.h"
 #include "common/utils/Result.h"

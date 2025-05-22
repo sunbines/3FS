@@ -10,7 +10,6 @@
 #include <regex.h>
 #include <string>
 #include <vector>
-
 #include "common/app/NodeId.h"
 #include "common/kv/IKVEngine.h"
 #include "common/kv/ITransaction.h"
@@ -34,9 +33,7 @@ class Distributor {
   };
 
   Distributor(const Config &config, flat::NodeId nodeId, std::shared_ptr<kv::IKVEngine> kvEngine)
-      : config_(config),
-        nodeId_(nodeId),
-        kvEngine_(kvEngine) {
+      : config_(config), nodeId_(nodeId), kvEngine_(kvEngine) {
     XLOGF_IF(FATAL, !nodeId_, "invalid node id {}", nodeId_);
   }
 

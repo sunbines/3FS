@@ -20,7 +20,6 @@
 #include <thread>
 #include <utility>
 #include <vector>
-
 #include "common/kv/ITransaction.h"
 #include "common/kv/KeyPrefix.h"
 #include "common/logging/LogInit.h"

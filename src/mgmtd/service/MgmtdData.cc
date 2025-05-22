@@ -1,5 +1,4 @@
 #include "MgmtdData.h"
-
 #include "MgmtdConfig.h"
 #include "core/utils/ServiceOperation.h"
 #include "helpers.h"

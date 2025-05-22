@@ -1,5 +1,4 @@
 #include "meta/components/GcManager.h"
-
 #include <algorithm>
 #include <cassert>
 #include <chrono>
@@ -24,7 +23,6 @@
 #include <string_view>
 #include <utility>
 #include <vector>
-
 #include "common/app/NodeId.h"
 #include "common/kv/ITransaction.h"
 #include "common/kv/WithTransaction.h"

@@ -8,8 +8,7 @@ namespace hf3fs::mgmtd {
 struct HeartbeatOperation : core::ServiceOperationWithMetric<"MgmtdService", "Heartbeat", "op"> {
   HeartbeatReq req;
 
-  explicit HeartbeatOperation(HeartbeatReq r)
-      : req(std::move(r)) {}
+  explicit HeartbeatOperation(HeartbeatReq r): req(std::move(r)) {}
 
   String toStringImpl() const final {
     return fmt::format("Heartbeat from {}@{} type {}",

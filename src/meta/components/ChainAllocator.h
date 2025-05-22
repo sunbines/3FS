@@ -10,7 +10,6 @@
 #include <optional>
 #include <utility>
 #include <vector>
-
 #include "client/mgmtd/ICommonMgmtdClient.h"
 #include "common/utils/Coroutine.h"
 #include "common/utils/Result.h"

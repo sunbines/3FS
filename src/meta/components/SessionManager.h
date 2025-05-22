@@ -14,7 +14,6 @@
 #include <tuple>
 #include <utility>
 #include <vector>
-
 #include "client/mgmtd/IMgmtdClientForServer.h"
 #include "common/app/ClientId.h"
 #include "common/app/NodeId.h"

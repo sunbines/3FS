@@ -5,7 +5,6 @@
 #include <string>
 #include <string_view>
 #include <utility>
-
 #include "common/kv/ITransaction.h"
 #include "common/kv/KeyPrefix.h"
 #include "common/serde/MessagePacket.h"
@@ -28,8 +27,7 @@ struct Idempotent {
   template <typename T>
   struct Record {
     Record() requires(std::is_same_v<T, Void>) = default;
-    explicit Record(const T &result)
-        : result(result) {}
+    explicit Record(const T &result): result(result) {}
 
     SERDE_STRUCT_FIELD(clientId, Uuid::zero());
     SERDE_STRUCT_FIELD(requestId, Uuid::zero());

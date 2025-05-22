@@ -16,7 +16,6 @@
 #include <string>
 #include <utility>
 #include <vector>
-
 #include "client/storage/StorageClient.h"
 #include "common/app/NodeId.h"
 #include "common/monitor/Recorder.h"

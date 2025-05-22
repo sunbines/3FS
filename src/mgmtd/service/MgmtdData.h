@@ -1,7 +1,6 @@
 #pragma once
 
 #include <folly/Synchronized.h>
-
 #include "ClientSession.h"
 #include "LeaseInfo.h"
 #include "RoutingInfo.h"

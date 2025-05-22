@@ -8,8 +8,7 @@ namespace hf3fs::mgmtd {
 struct GetClientSessionOperation : core::ServiceOperationWithMetric<"MgmtdService", "GetClientSession", "op"> {
   GetClientSessionReq req;
 
-  explicit GetClientSessionOperation(GetClientSessionReq r)
-      : req(std::move(r)) {}
+  explicit GetClientSessionOperation(GetClientSessionReq r): req(std::move(r)) {}
 
   String toStringImpl() const final { return fmt::format("GetClientSession {}", req.clientId); }
 

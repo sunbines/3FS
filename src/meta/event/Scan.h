@@ -15,7 +15,6 @@
 #include <optional>
 #include <stdexcept>
 #include <vector>
-
 #include "common/kv/IKVEngine.h"
 #include "common/kv/ITransaction.h"
 #include "common/kv/KeyPrefix.h"

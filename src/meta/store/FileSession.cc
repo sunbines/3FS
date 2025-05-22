@@ -1,9 +1,7 @@
 #include "meta/store/FileSession.h"
-
 #include <algorithm>
 #include <optional>
 #include <vector>
-
 #include "common/kv/ITransaction.h"
 #include "common/kv/KeyPrefix.h"
 #include "common/serde/Serde.h"

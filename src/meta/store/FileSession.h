@@ -6,7 +6,6 @@
 #include <string_view>
 #include <variant>
 #include <vector>
-
 #include "common/app/ClientId.h"
 #include "common/kv/ITransaction.h"
 #include "common/serde/Serde.h"

@@ -5,7 +5,6 @@
 #include <memory>
 #include <type_traits>
 #include <variant>
-
 #include "client/mgmtd/ICommonMgmtdClient.h"
 #include "client/mgmtd/MgmtdClientForServer.h"
 #include "common/app/NodeId.h"

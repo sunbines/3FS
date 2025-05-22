@@ -1,5 +1,4 @@
 #include "meta/service/MetaOperator.h"
-
 #include <algorithm>
 #include <cassert>
 #include <cmath>
@@ -24,7 +23,6 @@
 #include <unistd.h>
 #include <utility>
 #include <vector>
-
 #include "common/app/NodeId.h"
 #include "common/kv/ITransaction.h"
 #include "common/kv/WithTransaction.h"
@@ -149,24 +147,11 @@ MetaOperator::MetaOperator(const Config &cfg,
       fileHelper_(std::make_shared<FileHelper>(cfg, mgmtdClient, storageClient)),
       sessionManager_(
           std::make_shared<SessionManager>(cfg.session_manager(), nodeId, kvEngine_, mgmtdClient, fileHelper_)),
-      gcManager_(std::make_shared<GcManager>(cfg,
-                                             nodeId,
-                                             metaEventTraceLog_,
-                                             kvEngine_,
-                                             mgmtdClient,
-                                             inodeIdAlloc_,
-                                             fileHelper_,
-                                             sessionManager_,
-                                             userStore_)),
+      gcManager_(std::make_shared<GcManager>(cfg, nodeId, metaEventTraceLog_, kvEngine_, mgmtdClient,
+            inodeIdAlloc_, fileHelper_, sessionManager_, userStore_)),
       forward_(std::move(forward)),
-      metaStore_(std::make_unique<MetaStore>(cfg,
-                                             metaEventTraceLog_,
-                                             distributor_,
-                                             inodeIdAlloc_,
-                                             chainAlloc_,
-                                             fileHelper_,
-                                             sessionManager_,
-                                             gcManager_)) {
+      metaStore_(std::make_unique<MetaStore>(cfg, metaEventTraceLog_, distributor_, inodeIdAlloc_, chainAlloc_,
+            fileHelper_, sessionManager_, gcManager_)) {
   sessionManager_->setCloseFunc(
       [&](const auto &req) -> CoTryTask<void> { co_return (co_await close(req)).then([](auto &) { return Void{}; }); });
 }
@@ -259,8 +244,7 @@ void MetaOperator::afterStop() {
 
 kv::FDBRetryStrategy::Config MetaOperator::createRetryConfig() const {
   return kv::FDBRetryStrategy::Config{config_.retry_transaction().max_backoff(),
-                                      config_.retry_transaction().max_retry_count(),
-                                      true};
+                                      config_.retry_transaction().max_retry_count(), true};
 }
 
 CoTryTask<void> MetaOperator::authenticate(UserInfo &userInfo) {

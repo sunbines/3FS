@@ -8,7 +8,6 @@
 #include <optional>
 #include <type_traits>
 #include <utility>
-
 #include "common/kv/ITransaction.h"
 #include "common/monitor/Recorder.h"
 #include "common/monitor/Sample.h"
@@ -46,8 +45,7 @@ namespace hf3fs::meta::server {
 template <typename Rsp>
 class Operation : public IOperation<Rsp> {
  public:
-  Operation(MetaStore &meta)
-      : meta_(meta) {}
+  Operation(MetaStore &meta): meta_(meta) {}
 
   bool isReadOnly() override { return false; }
   CoTryTask<Rsp> run(IReadWriteTransaction &) override = 0;

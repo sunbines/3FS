@@ -38,8 +38,7 @@ class BatchContext : public folly::RequestData {
     std::shared_ptr<SharedFuture<T>> future;
 
     LoadGuard(bool needLoad, std::shared_ptr<SharedFuture<T>> future)
-        : needLoad(needLoad),
-          future(future) {}
+        : needLoad(needLoad), future(future) {}
 
     ~LoadGuard() {
       if (needLoad && !future->baton.ready()) {

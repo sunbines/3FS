@@ -12,7 +12,6 @@
 #include <string_view>
 #include <utility>
 #include <vector>
-
 #include "common/serde/Serde.h"
 #include "common/utils/MagicEnum.hpp"
 #include "common/utils/Path.h"

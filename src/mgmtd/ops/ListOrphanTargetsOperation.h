@@ -8,8 +8,7 @@ namespace hf3fs::mgmtd {
 struct ListOrphanTargetsOperation : core::ServiceOperationWithMetric<"MgmtdService", "ListOrphanTargets", "op"> {
   ListOrphanTargetsReq req;
 
-  explicit ListOrphanTargetsOperation(ListOrphanTargetsReq r)
-      : req(std::move(r)) {}
+  explicit ListOrphanTargetsOperation(ListOrphanTargetsReq r): req(std::move(r)) {}
 
   String toStringImpl() const final { return fmt::format("ListOrphanTargets"); }
 

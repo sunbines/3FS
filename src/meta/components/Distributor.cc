@@ -1,5 +1,4 @@
 #include "Distributor.h"
-
 #include <algorithm>
 #include <array>
 #include <climits>
@@ -14,7 +13,6 @@
 #include <string>
 #include <string_view>
 #include <vector>
-
 #include "common/app/NodeId.h"
 #include "common/kv/ITransaction.h"
 #include "common/kv/KeyPrefix.h"

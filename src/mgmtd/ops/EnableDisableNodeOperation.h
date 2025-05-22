@@ -8,8 +8,7 @@ namespace hf3fs::mgmtd {
 struct EnableNodeOperation : core::ServiceOperationWithMetric<"MgmtdService", "EnableNode", "op"> {
   EnableNodeReq req;
 
-  explicit EnableNodeOperation(EnableNodeReq r)
-      : req(std::move(r)) {}
+  explicit EnableNodeOperation(EnableNodeReq r): req(std::move(r)) {}
 
   String toStringImpl() const final { return fmt::format("EnableNode {}", req.nodeId); }
 
@@ -19,8 +18,7 @@ struct EnableNodeOperation : core::ServiceOperationWithMetric<"MgmtdService", "E
 struct DisableNodeOperation : core::ServiceOperationWithMetric<"MgmtdService", "DisableNode", "op"> {
   DisableNodeReq req;
 
-  explicit DisableNodeOperation(DisableNodeReq &&r)
-      : req(std::move(r)) {}
+  explicit DisableNodeOperation(DisableNodeReq &&r): req(std::move(r)) {}
 
   String toStringImpl() const final { return fmt::format("disableNode {}", req.nodeId); }
 

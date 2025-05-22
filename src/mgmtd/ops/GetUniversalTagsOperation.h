@@ -8,8 +8,7 @@ namespace hf3fs::mgmtd {
 struct GetUniversalTagsOperation : core::ServiceOperationWithMetric<"MgmtdService", "GetUniversalTags", "op"> {
   GetUniversalTagsReq req;
 
-  explicit GetUniversalTagsOperation(GetUniversalTagsReq r)
-      : req(std::move(r)) {}
+  explicit GetUniversalTagsOperation(GetUniversalTagsReq r): req(std::move(r)) {}
 
   String toStringImpl() const final { return fmt::format("GetUniversalTags {}", req.universalId); }
 

@@ -1,5 +1,4 @@
 #include "meta/store/Inode.h"
-
 #include <cassert>
 #include <cstddef>
 #include <fmt/core.h>
@@ -11,7 +10,6 @@
 #include <optional>
 #include <string_view>
 #include <utility>
-
 #include "common/kv/ITransaction.h"
 #include "common/kv/KeyPrefix.h"
 #include "common/serde/Serde.h"

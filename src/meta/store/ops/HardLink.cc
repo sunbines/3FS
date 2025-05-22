@@ -7,7 +7,6 @@
 #include <linux/fs.h>
 #include <memory>
 #include <utility>
-
 #include "common/kv/ITransaction.h"
 #include "common/utils/Coroutine.h"
 #include "common/utils/Result.h"
@@ -22,8 +21,7 @@ namespace hf3fs::meta::server {
 class HardLinkOp : public Operation<HardLinkRsp> {
  public:
   HardLinkOp(MetaStore &meta, const HardLinkReq &req)
-      : Operation<HardLinkRsp>(meta),
-        req_(req) {}
+      : Operation<HardLinkRsp>(meta), req_(req) {}
 
   OPERATION_TAGS(req_);
 

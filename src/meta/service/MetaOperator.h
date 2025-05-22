@@ -13,7 +13,6 @@
 #include <optional>
 #include <type_traits>
 #include <utility>
-
 #include "client/mgmtd/ICommonMgmtdClient.h"
 #include "client/mgmtd/IMgmtdClientForServer.h"
 #include "client/storage/StorageClient.h"

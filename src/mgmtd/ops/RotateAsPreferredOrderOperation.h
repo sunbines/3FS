@@ -9,8 +9,7 @@ struct RotateAsPreferredOrderOperation
     : core::ServiceOperationWithMetric<"MgmtdService", "RotateAsPreferredOrder", "op"> {
   RotateAsPreferredOrderReq req;
 
-  explicit RotateAsPreferredOrderOperation(RotateAsPreferredOrderReq r)
-      : req(std::move(r)) {}
+  explicit RotateAsPreferredOrderOperation(RotateAsPreferredOrderReq r): req(std::move(r)) {}
 
   String toStringImpl() const final { return fmt::format("RotateAsPreferredOrder {}", req.chainId); }
 
